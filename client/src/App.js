@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import axios from 'axios';
+import HomePage from './page/HomePage';
+import Login from './components/Login';
 
 class App extends Component {
   constructor(props) {
@@ -19,12 +21,10 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        {this.state.hello?
-          (<h1>Hello Bloger</h1>)
-          : null
-        }
-      </div>
+      <Fragment>
+        <HomePage/>
+        <Login/>
+      </Fragment>
     )
   }
 }
